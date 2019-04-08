@@ -3,7 +3,7 @@
 #include "helplist.h"
 
 int main(void) {
-	printf("Welcome to pipi0425's Multi-function Calculator Project\n");
+	printf("Welcome to pipi0425's Multi-functional Calculator Project\n");
 	
 	helplist();
 

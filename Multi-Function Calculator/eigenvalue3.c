@@ -1,6 +1,7 @@
 #include <stdio.h>
 
 #include "eigenvalue3.h"
+#include "polynomials.h"
 
 void eigenvalue3(void) {
 	//variables

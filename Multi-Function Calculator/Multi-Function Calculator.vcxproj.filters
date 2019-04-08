@@ -24,12 +24,18 @@
     <ClCompile Include="helplist.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="polynomials.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="eigenvalue3.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="helplist.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="polynomials.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
