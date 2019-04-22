@@ -16,4 +16,5 @@ Plan: after Apr. 16th (the 4th final of this semester), implement more functions
 - [ ] Finish `polynomials.c`for eigenvalue section
 - [ ] Include polynomials in main
 - [ ] More functions for number theory calculation
+- [ ] Modify commands to prevent previous commands interrupting next input
 - [ ] Try to convert this program to javascript and make GUI in html
