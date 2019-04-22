@@ -52,12 +52,53 @@ void polynomial_call(void) {
 	char type;
 	scanf_s(" %c", &type, sizeof(type));
 	if (type == '2') {
+		printf("please enter 3 numbers for a b and c in ax^2+bx+c=0\n");
+		double a, b, c;
+		double real1, real2, imag1, imag2;
+		int state;
+		printf("a=");
+		scanf_s("%lf", &a, sizeof(a));
+		printf("b=");
+		scanf_s("%lf", &b, sizeof(b));
+		printf("c=");
+		scanf_s("%lf", &c, sizeof(c));
+		state = quadratic(a, b, c, &real1, &real2, &imag1, &imag2);
+		switch (state)
+		{
+		case 1:
+			printf("a = b = c = 0? are you serious?\n");
+			break;
+		case 2:
+			printf("Now c != 0, but c = 0, what result do you expect?\n");
+			break;
+		case 3:
+			printf("Solve a linear equation with quadratic equation calculator?!\n");
+			printf("Oh, that's funny...\n");
+			printf("[%10.3f] x + [%10.3f] = 0, so x = [%10.3f]\n", b, c, real1);
+			break;
+		case 4:
+			printf("[%10.3f] x^2 + [%10.3f] x + [%10.3f] = 0, 2 distinct real solutions:\n", a, b, c);
+			printf("x1 = [%10.3f], x2 = [%10.3f]", real1, real2);
+			break;
+		case 5:
+			printf("[%10.3f] x^2 + [%10.3f] x + [%10.3f] = 0, 1 real solution:\n", a, b, c);
+			printf("x1 = x2 = [%10.3f]\n", real1);
+			break;
+		case 6:
+			printf("[%10.3f] x^2 + [%10.3f] x + [%10.3f] = 0, 2 complex solutions:\n", a, b, c);
+			printf("x1 = [%10.3f] + [%10.3f]i, x2 = [%10.3f] + [%10.3f]i\n", real1, imag1, real2, imag2);
+			break;
+		default:
+			printf("YOU SHOULD NEVER SEE THIS, UNKNOWN ERROR!!!\n");
+			break;
+		}
 
 	}
 	else if (type == '3') {
 
 	}
 	else {
+		printf("This is not supported.\n");
 		return;
 	}
 	

@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "eigenvalue3.h"
 #include "helplist.h"
+#include "polynomials.h"
 
 int main(void) {
 	printf("Welcome to pipi0425's Multi-functional Calculator Project\n");
@@ -14,7 +15,10 @@ int main(void) {
 			helplist();
 			continue;
 		}
-		if (command == 'E') {
+		else if (command == 'P') {
+			polynomial_call();
+		}
+		else if (command == 'E') {
 			eigenvalue3();
 		}
 		else {
